@@ -76,7 +76,6 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
-          cache: 'gradle'
 
       - name: Cache Gradle
         id: cache-gradle
@@ -85,7 +84,7 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle
+          key: ${{ runner.os }}-gradle-2
 
       - name: Install missing deps
         run: |
