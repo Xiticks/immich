@@ -91,7 +91,7 @@ jobs:
         run: |
           sudo add-apt-repository ppa:rmescandon/yq
           sudo apt-get update
-          sudo apt-get install -y yq xz-utils ninja-build
+          sudo apt-get install -y yq xz-utils ninja-build zstd
 
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@e938fdf56512cc96ef2f93601a5a40bde3801046 # v2.19.0
