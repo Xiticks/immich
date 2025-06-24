@@ -78,6 +78,15 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
+      - name: Cache Gradle
+        id: cache-gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle
+
       - name: Install missing deps
         run: |
           sudo add-apt-repository ppa:rmescandon/yq
